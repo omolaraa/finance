@@ -14,17 +14,17 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-sm navbar-light menu">
+<nav class="navbar navbar-expand-md navbar-dark menu px-5 py-4">
   <div class="container-fluid menu-container">
     <a class="navbar-brand d-flex align-items-center" href="#">
-    <i class="fa-brands fa-drupal"></i>
+    <i class="fa-brands fa-drupal logo"></i>
     <h3 class="h3-color">Finance <br> Consultants</h1>
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon btn-icon"></span>
     </button>
-    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-      <ul class="navbar-nav">
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav p-2 px-5 d-flex gap-3">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
@@ -41,12 +41,33 @@
           <a class="nav-link" href="#">Blog</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact Us</a>
+          <a class="nav-link" href="#">Contact</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
+<section id="home" class="intro-section">
+  <div class="container">
+    <div class="row d-flex align-items-center">
+      <div class="col-md-6 intros">
+        <div class="intros-headings mb-4 d-grid gap-3">
+          <h1>Professional Business Consulting Agency</h1>
+          <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Aspernatur facere neque facilis praesentium necessitatibus.</h6>
+        </div>
+        <button class="rounded btn btn-primary btn-md" type="button">Learn more
+          <span class="ms-1">
+          <i class="fa-solid fa-arrow-right"></i>
+          </span>
+        </button>
+      </div>
+      <div class="col-md-6 intros">
+        <img src="./assets/images/Motivation_Monochromatic.png" alt="illustration" class="intros-image">
+      </div>
+    </div>
+  </div>
+</section>
     
 <script src="./assets/js/bootstrap.bundle.js"></script>
 </body>

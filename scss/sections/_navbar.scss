@@ -1,14 +1,25 @@
 @use '../custom' as *;
+@use '../components/mixins' as *;
 
 .menu{
-    background-color: $primary;
+    // background-color: $primary;
+    @include gradient;
 
     .menu-container {
         a{
-            color: $secondary
+            color: $secondary;
+        }
+        .logo{
+            font-size: 3rem;
         }
         .active{
             color: $tertiary;
         }
+       .btn{
+        border: none;
+        &:focus{
+        border: none;
+       }
+       }
+        }
     }
-}

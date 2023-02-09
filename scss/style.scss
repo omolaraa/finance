@@ -1,2 +1,12 @@
 @use 'custom';
+@use 'components/buttons';
+@use 'components/mixins';
+@use 'components/typography';
 @use 'sections/navbar';
+@use 'sections/intro-section';
+@use 'sections/home';
+@use 'sections/about';
+@use 'sections/blog';
+@use 'sections/contact';
+@use 'sections/projects';
+@use 'sections/services';
