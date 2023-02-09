@@ -1,0 +1,14 @@
+@use '../custom' as *;
+
+.menu{
+    background-color: $primary;
+
+    .menu-container {
+        a{
+            color: $secondary
+        }
+        .active{
+            color: $tertiary;
+        }
+    }
+}
