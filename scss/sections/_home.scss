@@ -1,0 +1,77 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.services{
+    @include gradient;
+    color: $secondary;
+   
+    .row{
+        .service{
+            @include gradient;
+            width: 20rem;
+            padding: 1.3rem;
+            border-radius: 1rem;
+            border: 1px solid white;
+
+            &--icon{
+                font-size: 7rem;
+            }
+        }
+    }
+}
+
+.section-strategy{
+    @include media-breakpoint-up(xl) {
+        padding: 5rem 8rem;
+     }
+    padding: 5rem 2rem;
+    .strategy-description{
+        @include media-breakpoint-up(lg) {
+            width: 30rem;
+         }
+        @include media-breakpoint-down(md) {
+            width: 30rem;
+         }
+        width: 50%;
+        .heading{
+            .heading-top{
+                color: $primary;
+            }
+            .heading-bottom{
+                @include media-breakpoint-down(md) {
+                    // width: 25rem;
+                 }
+            }
+        }
+       
+        .text-bottom{
+            // width: 20rem;
+            line-height: 1.5rem;
+        }
+
+        .rounded{
+            margin-top: 2rem;
+            @include button($primary, $secondary);
+        }
+    }
+    .strategy-img{
+        width: 50%;
+        @include media-breakpoint-up(lg) {
+            width: 40%;
+         }
+         @include media-breakpoint-down(lg) {
+            width: 30%;
+         }
+       img{
+         width: 100%;
+         height: 30rem;
+
+        
+        
+         @include media-breakpoint-down(md) {
+             display: none;
+          }
+       }
+   }
+    
+}

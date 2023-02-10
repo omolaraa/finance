@@ -1,0 +1,32 @@
+@use '../custom' as *;
+
+.heading{
+    text-transform: uppercase;
+
+    &-buttom{
+        letter-spacing: -2px;
+    }
+}
+
+.services{
+    .text{
+        .text-top{
+            text-transform: uppercase;
+            line-height: 2rem;
+        }
+        .text-bottom{
+            text-transform: lowercase;
+            font-weight: 400;
+            font-size: 1rem;
+        }
+    }
+}
+.text{
+    .text-top{
+     font-weight: bold;
+    }
+    .text-bottom{
+     font-weight: 500;
+     font-size: 1rem;
+    }
+ }

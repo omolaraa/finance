@@ -1,15 +1,15 @@
 @use '../custom' as *;
+@use '../components/mixins' as *;
 
 .rounded{
     width: 10rem;
     font-weight: bold;
     text-transform: capitalize;
     padding: 0.7rem 1rem;
-    background-color: $secondary;
-    color: $primary;
-    
-    span{
-        line-height: 2rem;
-    }
+   @include button($secondary, $primary);
+
+   span{
+    line-height: 2rem;
+}
 
 }

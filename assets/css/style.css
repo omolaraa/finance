@@ -10781,6 +10781,31 @@ textarea.form-control-lg {
   line-height: 2rem;
 }
 
+.heading {
+  text-transform: uppercase;
+}
+.heading-buttom {
+  letter-spacing: -2px;
+}
+
+.services .text .text-top {
+  text-transform: uppercase;
+  line-height: 2rem;
+}
+.services .text .text-bottom {
+  text-transform: lowercase;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.text .text-top {
+  font-weight: bold;
+}
+.text .text-bottom {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
 .menu {
   background: rgb(9, 9, 121);
   background: linear-gradient(90deg, rgb(9, 9, 121) 0%, rgb(0, 0, 0) 100%);
@@ -10824,6 +10849,141 @@ textarea.form-control-lg {
 }
 .intros-image {
   width: 100%;
+}
+@media (max-width: 991.98px) {
+  .intros-image {
+    width: 76%;
+  }
+}
+
+.services {
+  background: rgb(9, 9, 121);
+  background: linear-gradient(90deg, rgb(9, 9, 121) 0%, rgb(0, 0, 0) 100%);
+  color: #fff;
+}
+.services .row .service {
+  background: rgb(9, 9, 121);
+  background: linear-gradient(90deg, rgb(9, 9, 121) 0%, rgb(0, 0, 0) 100%);
+  width: 20rem;
+  padding: 1.3rem;
+  border-radius: 1rem;
+  border: 1px solid white;
+}
+.services .row .service--icon {
+  font-size: 7rem;
+}
+
+.section-strategy {
+  padding: 5rem 2rem;
+}
+@media (min-width: 1200px) {
+  .section-strategy {
+    padding: 5rem 8rem;
+  }
+}
+.section-strategy .strategy-description {
+  width: 50%;
+}
+@media (min-width: 992px) {
+  .section-strategy .strategy-description {
+    width: 30rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .section-strategy .strategy-description {
+    width: 30rem;
+  }
+}
+.section-strategy .strategy-description .heading .heading-top {
+  color: #090979;
+}
+.section-strategy .strategy-description .text-bottom {
+  line-height: 1.5rem;
+}
+.section-strategy .strategy-description .rounded {
+  margin-top: 2rem;
+  background-color: #090979;
+  color: #fff;
+}
+.section-strategy .strategy-img {
+  width: 50%;
+}
+@media (min-width: 992px) {
+  .section-strategy .strategy-img {
+    width: 40%;
+  }
+}
+@media (max-width: 991.98px) {
+  .section-strategy .strategy-img {
+    width: 30%;
+  }
+}
+.section-strategy .strategy-img img {
+  width: 100%;
+  height: 30rem;
+}
+@media (max-width: 767.98px) {
+  .section-strategy .strategy-img img {
+    display: none;
+  }
+}
+
+.team {
+  width: 20rem;
+  min-height: 14rem;
+}
+@media (min-width: 992px) {
+  .team {
+    width: 25rem;
+  }
+}
+.team img {
+  background: rgb(9, 9, 121);
+  background: linear-gradient(90deg, rgb(9, 9, 121) 0%, rgb(0, 0, 0) 100%);
+  width: 100%;
+  height: 15rem;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+}
+.team-intro a i {
+  font-size: 2rem;
+}
+
+footer {
+  background: rgb(9, 9, 121);
+  background: linear-gradient(90deg, rgb(9, 9, 121) 0%, rgb(0, 0, 0) 100%);
+  color: #fff;
+  padding: 3rem;
+}
+footer .logo-link {
+  text-decoration: none;
+  color: #fff;
+}
+footer .logo-link .logo {
+  font-size: 3rem;
+}
+footer .logo-link .logo-text {
+  font-weight: bold;
+}
+footer .links h3 {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: bold;
+}
+footer .links ul {
+  font-size: 0.9rem;
+  padding: 0;
+}
+footer .links ul li {
+  list-style: none;
+}
+footer .links ul li i {
+  color: #ced4da;
+}
+footer .links ul li a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */

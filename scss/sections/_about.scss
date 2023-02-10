@@ -1,0 +1,38 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.team{
+    @include media-breakpoint-up(lg) {
+        width: 25rem;
+         }
+    width: 20rem;
+    min-height: 14rem;
+
+   
+    img{
+        @include gradient;
+        width: 100%;
+        height: 15rem;
+        border-top-left-radius: 1.5rem;
+            border-top-right-radius: 1.5rem;
+    }
+
+   &-intro{
+    // .text{
+    //    .text-top{
+    //     font-weight: bold;
+    //    }
+    //    .text-bottom{
+    //     font-weight: 500;
+    //     font-size: 1rem;
+    //    }
+    // }
+    a{
+        i{
+            font-size: 2rem;
+        }
+    }
+   
+   }
+  
+}

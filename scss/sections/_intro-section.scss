@@ -29,6 +29,9 @@
 
     }
    &-image{
+    @include media-breakpoint-down(lg) {
+        width: 76%;
+     }
     width: 100%;
    }
    
