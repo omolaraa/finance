@@ -10856,23 +10856,6 @@ textarea.form-control-lg {
   }
 }
 
-.services {
-  background: rgb(9, 9, 121);
-  background: linear-gradient(90deg, rgb(9, 9, 121) 0%, rgb(0, 0, 0) 100%);
-  color: #fff;
-}
-.services .row .service {
-  background: rgb(9, 9, 121);
-  background: linear-gradient(90deg, rgb(9, 9, 121) 0%, rgb(0, 0, 0) 100%);
-  width: 20rem;
-  padding: 1.3rem;
-  border-radius: 1rem;
-  border: 1px solid white;
-}
-.services .row .service--icon {
-  font-size: 7rem;
-}
-
 .section-strategy {
   padding: 5rem 2rem;
 }
@@ -10938,8 +10921,6 @@ textarea.form-control-lg {
   }
 }
 .team img {
-  background: rgb(9, 9, 121);
-  background: linear-gradient(90deg, rgb(9, 9, 121) 0%, rgb(0, 0, 0) 100%);
   width: 100%;
   height: 15rem;
   border-top-left-radius: 1.5rem;
@@ -10947,6 +10928,51 @@ textarea.form-control-lg {
 }
 .team-intro a i {
   font-size: 2rem;
+}
+
+.contact-section .contact-intro {
+  background: rgb(9, 9, 121);
+  background: linear-gradient(90deg, rgb(9, 9, 121) 0%, rgb(0, 0, 0) 100%);
+  padding: 5rem;
+  color: #fff;
+}
+.contact-section .contact-intro h1 {
+  text-transform: capitalize;
+}
+.contact-section .row {
+  padding: 3rem;
+}
+@media (max-width: 767.98px) {
+  .contact-section .row {
+    padding: 5rem;
+    gap: 3rem;
+  }
+}
+
+.services {
+  background: rgb(9, 9, 121);
+  background: linear-gradient(90deg, rgb(9, 9, 121) 0%, rgb(0, 0, 0) 100%);
+  color: #fff;
+}
+.services .row .service {
+  background: rgb(9, 9, 121);
+  background: linear-gradient(90deg, rgb(9, 9, 121) 0%, rgb(0, 0, 0) 100%);
+  width: 20rem;
+  padding: 1.3rem;
+  border-radius: 1rem;
+  border: 1px solid white;
+}
+.services .row .service--icon {
+  font-size: 7rem;
+}
+
+.clients {
+  background-color: #fff;
+  color: #ced4da;
+}
+.clients .client-list .client {
+  list-style: none;
+  font-size: 3rem;
 }
 
 footer {
@@ -10958,6 +10984,11 @@ footer {
 footer .logo-link {
   text-decoration: none;
   color: #fff;
+}
+@media (max-width: 767.98px) {
+  footer .logo-link {
+    margin-bottom: 1rem;
+  }
 }
 footer .logo-link .logo {
   font-size: 3rem;

@@ -1,25 +1,6 @@
 @use '../custom' as *;
 @use '../components/mixins' as *;
 
-.services{
-    @include gradient;
-    color: $secondary;
-   
-    .row{
-        .service{
-            @include gradient;
-            width: 20rem;
-            padding: 1.3rem;
-            border-radius: 1rem;
-            border: 1px solid white;
-
-            &--icon{
-                font-size: 7rem;
-            }
-        }
-    }
-}
-
 .section-strategy{
     @include media-breakpoint-up(xl) {
         padding: 5rem 8rem;

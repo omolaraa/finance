@@ -1,0 +1,34 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.services{
+    @include gradient;
+    color: $secondary;
+   
+    .row{
+        .service{
+            @include gradient;
+            width: 20rem;
+            padding: 1.3rem;
+            border-radius: 1rem;
+            border: 1px solid white;
+
+            &--icon{
+                font-size: 7rem;
+            }
+        }
+    }
+}
+
+.clients{
+    background-color: $secondary;
+    color: $tertiary;
+
+    .client-list{
+
+       .client{
+        list-style: none;
+        font-size: 3rem;
+       }
+    }
+}

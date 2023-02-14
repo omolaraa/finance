@@ -1,0 +1,25 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.contact-section{
+//    border-top: 1px solid $secondary;
+   .contact-intro{
+    @include gradient;
+    padding: 5rem;
+    // background-color: $secondary;
+    color:$secondary;
+
+    h1{
+        text-transform: capitalize;
+        // font-size: 4rem;
+    }
+   }
+
+   .row{
+    @include media-breakpoint-down(md) {
+        padding: 5rem;
+        gap: 3rem;
+     }
+     padding: 3rem;
+   }
+}

@@ -30,21 +30,14 @@
             <a class="nav-link" href="../finance/about.php">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../finance/services.php">Services</a>
+            <a class="nav-link" href="../finance/service.php">Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="../finance/contact.php">Contact</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-  <section id="home" class="intro-section">
-    <div class="container">
+ 
         

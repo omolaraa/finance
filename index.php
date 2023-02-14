@@ -26,7 +26,8 @@ $services = [
 ];
 ?>
    
-
+   <section id="home" class="intro-section">
+    <div class="container">
 <div class="row d-flex align-items-center">
   <div class="col-lg-6 intros">
     <div class="intros-headings mb-4 d-grid gap-3">
@@ -43,7 +44,7 @@ $services = [
 </div>
 </section>
 
-<section class="services p-5">
+<section class="services  p-5">
   <div class="container-fuid pt-5">
     <div class="heading d-grid justify-content-center mb-5">
       <h5 class="heading-top text-center fw-bold">Our Expertise</h5>

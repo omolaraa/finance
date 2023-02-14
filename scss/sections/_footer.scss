@@ -5,7 +5,16 @@ footer{
     @include gradient;
     color: $secondary;
     padding: 3rem;
+
+    // .row{
+        // @include media-breakpoint-down(md) {
+        //     gap: 3rem;
+        //  }
+    // }
     .logo-link{
+        @include media-breakpoint-down(md) {
+            margin-bottom: 1rem;
+         }
         text-decoration: none;
         color: $secondary;
         .logo{
