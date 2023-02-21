@@ -1,38 +1,11 @@
 <?php include 'components/header.php'; ?>
 <?php
 
-$services = [
-  [
-    'icon' => 'fa-brands fa-slack',
-    'heading-top' => 'Creating digital advantage',
-    'heading-bottom' => 'Creating meaningful and transformative steps toward success'
-  ],
-  [
-    'icon' => 'fa-brands fa-slack',
-    'heading-top' => 'Creating digital advantage',
-    'heading-bottom' => 'Creating meaningful and transformative steps toward'
-  ],
-  [
-    'icon' => 'fa-brands fa-slack',
-    'heading-top' => 'Creating digital advantage',
-    'heading-bottom' => 'Creating meaningful and transformative steps toward success'
-  ],
-  [
-    'icon' => 'fa-brands fa-slack',
-    'heading-top' => 'Creating digital advantage',
-    'heading-bottom' => 'Creating meaningful and transformative steps toward success'
-  ],
-  [
-    'icon' => 'fa-brands fa-slack',
-    'heading-top' => 'Creating digital advantage',
-    'heading-bottom' => 'Creating meaningful and transformative steps toward success'
-  ],
-  [
-    'icon' => 'fa-brands fa-slack',
-    'heading-top' => 'Creating digital advantage',
-    'heading-bottom' => 'Creating meaningful and transformative steps toward success'
-  ],
-];
+$sql = 'SELECT * FROM services';
+$result = mysqli_query($conn, $sql);
+$services = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+
 ?>
  <section id="home" class="intro-section">
     <div class="container">
@@ -59,6 +32,10 @@ $services = [
       <h1 class="heading-buttom fw-bold">Tailored expertise for your success</h1>
     </div>
     <div class="row justify-content-center gap-4">
+
+    <?php if(empty($services)): ?>
+      <p class="col-md-12 mt3">There is no feedback</p>
+    <?php endif; ?>
 
       <?php foreach ($services as $service) : ?>
         <div class="col-md-3 service d-grid gap-5">

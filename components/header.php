@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+<?php include 'config/database.php'; ?>  
+
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,16 +26,16 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav p-2 px-5 d-flex gap-3">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="../finance/index.php">Home</a>
+            <a class="nav-link active" aria-current="page" href="index.php">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../finance/about.php">About</a>
+            <a class="nav-link" href="about.php">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../finance/service.php">Services</a>
+            <a class="nav-link" href="services.php">Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../finance/contact.php">Contact</a>
+            <a class="nav-link" href="contact.php">Contact</a>
           </li>
         </ul>
       </div>

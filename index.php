@@ -1,29 +1,14 @@
 <?php include 'components/header.php'; ?>
 <?php
 
-$services = [
-  [
-    'icon' => 'fa-brands fa-slack',
-    'heading-top' => 'Creating digital advantage',
-    'heading-bottom' => 'Creating meaningful and transformative steps toward success'
-  ],
-  [
-    'icon' => 'fa-brands fa-slack',
-    'heading-top' => 'Creating digital advantage',
-    'heading-bottom' => 'Creating meaningful and transformative steps toward'
-  ]
-];
+$sql = 'SELECT * FROM services';
+$result = mysqli_query($conn, $sql);
+$services = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
- $strategies= [
-  [
-    'title' => 'Strategy Buildup',
-    'description' => 'Quis autem vel eum iure reprehenderit qui eluptate velit esse quam nihil molestiae consequatur'
-],
-[
-  'title' => 'Business Monitoring',
-  'description' => 'Quis autem vel eum iure reprehenderit qui eluptate velit esse quam nihil molestiae consequatur'
-]
-];
+$sql = 'SELECT * FROM strategies';
+$result = mysqli_query($conn, $sql);
+$strategies = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
 ?>
    
    <section id="home" class="intro-section">
@@ -51,7 +36,9 @@ $services = [
       <h1 class="heading-buttom fw-bold">Tailored expertise for your success</h1>
     </div>
     <div class="row justify-content-center gap-4">
-
+    <?php if(empty($services)): ?>
+      <p class="col-md-12 mt3">There are no services</p>
+    <?php endif; ?>
       <?php foreach ($services as $service) : ?>
         <div class="col-md-3 service d-grid gap-5">
           <div class="service--icon text-center">
@@ -76,7 +63,9 @@ $services = [
           <h5 class="heading-top text-start fw-bold">Our Expertise</h5>
           <h1 class="heading-bottom fw-bold">Tailored expertise for your success</h1>
         </div>
-
+        <?php if(empty($strategies)): ?>
+      <p class="mt3">There are no strategies</p>
+    <?php endif; ?>
         <?php foreach ($strategies as $strategy) : ?>
         <h3 class="text d-flex flex-column gap-1 ">
           <span class="text-top"><?php echo $strategy['title']; ?></span>

@@ -1,19 +1,51 @@
 <?php include 'components/header.php'; ?>
 <?php
-$contacts = [
-    [
-      'header' => 'Headquaters',
-      'address' => 'Address: 9863 - 9867 MILL ROAD, CAMBRIDGE, MG09 99HT.',
-      'number' => 'Telephone: +1 800 603 6035',
-      'email' => 'Email: mail@demolink.org'
-    ],
-    [
-        'header' => 'Support Centre',
-        'address' => 'Address: 9870 ST VINCENT PLACE, GLASGOW, DC 45 FR 45',
-        'number' => 'Telephone: +1 800 603 6035',
-        'email' => 'Email: mail@demolink.org'
-      ]
-  ];
+
+$sql = 'SELECT * FROM contacts';
+$result = mysqli_query($conn, $sql);
+$contacts = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+
+$name = $email = $body = '';
+ $nameErr = $emailErr = $bodyErr = '';
+
+ //Form submit
+ if(isset($_POST['submit'])){
+
+  //Validate name
+  if(empty($_POST['name'])) {
+    $nameErr = 'Name is required';
+  }else{
+    $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
+  }
+
+  //Validate email
+  if(empty($_POST['email'])) {
+    $emailErr = 'Email is required';
+  }else{
+    $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+  }
+
+  //Validate body
+  if(empty($_POST['body'])) {
+    $bodyErr = 'Feedback is required';
+  }else{
+    $body = filter_input(INPUT_POST, 'body', FILTER_SANITIZE_SPECIAL_CHARS);
+  }
+
+  //Send form values to Mysql database:
+    if(empty($nameErr) && empty($emailErr) && empty($bodyErr)){
+      //Add to database
+      $sql = "INSERT INTO `client-info` (name, email, body) VALUES ('$name', '$email', '$body')";
+      if(mysqli_query($conn, $sql)){
+        //Success
+        header('Location: contact.php');
+      }else{
+        //Error
+        echo 'Error: ' . mysqli_error($conn);
+      }
+    }
+ }
 ?>
 
 <section class="contact-section">
@@ -24,6 +56,9 @@ $contacts = [
     <div class="row">
         <div class="col-md-6">
             <h1 class="mb-2">How To Find Us</h1>
+            <?php if(empty($contacts)): ?>
+      <p class="col-md-12 mt3">There are no contacts</p>
+    <?php endif; ?>
             <?php foreach ($contacts as $contact) : ?>
             <div class="contact mb-4">
                 <h5 class="mb-2 fw-bold"><?php echo $contact['header']; ?></h5>
