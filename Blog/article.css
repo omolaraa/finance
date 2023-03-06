@@ -1,0 +1,14 @@
+section{
+    background-color: rgb(195, 204, 245);
+}
+.side-bar-img{
+    max-width: 5rem;
+    height: 5rem;
+    border-radius: 100%;
+}
+
+.card-img{
+    max-width: 100%;
+    height: 20rem;
+    background-size: cover;
+}

@@ -1,8 +1,8 @@
 <?php include 'components/header.php'; ?>
 <?php
 
-$sql = 'SELECT * FROM services';
-$result = mysqli_query($conn, $sql);
+$sql = 'SELECT * FROM services'; 
+$result = mysqli_query($conn_1, $sql);
 $services = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 
@@ -34,7 +34,7 @@ $services = mysqli_fetch_all($result, MYSQLI_ASSOC);
     <div class="row justify-content-center gap-4">
 
     <?php if(empty($services)): ?>
-      <p class="col-md-12 mt3">There is no feedback</p>
+      <p class="col-md-12 mt-3">There is no feedback</p>
     <?php endif; ?>
 
       <?php foreach ($services as $service) : ?>

@@ -2,11 +2,11 @@
 <?php
 
 $sql = 'SELECT * FROM services';
-$result = mysqli_query($conn, $sql);
+$result = mysqli_query($conn_1, $sql);
 $services = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 $sql = 'SELECT * FROM strategies';
-$result = mysqli_query($conn, $sql);
+$result = mysqli_query($conn_1, $sql);
 $strategies = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 ?>
