@@ -35,7 +35,7 @@
             <a class="nav-link" href="services.php">Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Blog/blog.php">Blog</a>
+            <a class="nav-link" href="blog.php">Blog</a>
           </li>
           
           <li class="nav-item">
